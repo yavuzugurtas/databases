@@ -64,16 +64,29 @@ More info here: https://dev.mysql.com/doc/refman/5.7/en/group-by-handling.html
 2. For the question "Find how many actors are in their 20’s, 30’s, 40’s, 50’s etc":
 What is required here is to "change" the age of each person to simply their decade; for example, if someone is 53 ->50, if someone id 27->20. For this, you must use something that we have not actually seen: FLOOR(). This function basically rounds your number to the larger integer that is less than your number. In our case floor(age/10)*10 will do the trick.
 
+> For the next 4 exercises you'll be focusing on modifying the Todos server app from NodeJS week3 to use databases instead of files, as the storage medium. Use the todos app from https://github.com/HackYourFutureBelgium/databases/tree/master/week-2-lecture/todos-app as your starting point.
 
 ## Exercise 3: Create a database for the todos homework. Todos will now belong to a user.
 
+The app can register *Users*, and *Todos* are created against a user, not by themselves. So User `mark`, could have 3 todos, which are independent from user `amy`. A User will only list their own todos, and add, update and delete their own todos.
+
+A *User* has a `username`, a `description`, a `birthday`.
+A *Todo* has a `description` and flag to indicate if it's done.
+
+Think of how you'd model this in a database. What tables would you create?
+
 ## Exercise 4: Use Primary and Foreign Keys to link the tables.
+
+Each user should be uniquely identifiable, so should each todo. Not only that, each todo should belong to some user, so there needs to be a *relationship* between them. Think of how you would model this.
 
 ## Exercise 5:Create the queries (using JOINS) to tell us.
 
+1. How many users above the age of 35 have any incomplete todos?
+1. How many completed todos does each user have?
+
 ## Exercise 6:Update the todos app to use a database.
 
-
+Instead of saving the user and todos data to files, save them to the database you created.
 
 ## Submitting the Homework
 
