@@ -31,22 +31,22 @@ In order to query properly, you must understand which tables have what kind of d
 ### Write queries to retrieve data that answers the following questions:
 
 WORLD:
-What's the population of the world ?
-What is the name and the population of the most populated city in India?
-Find which countries do not have a capital.
-Which country has the lowest population? List all if more than one
-What are the names of all the cities in Vietnam?
-Find the average life expectancy per continent.
-Find the name and population of each USA district.
-Find the name of the cities that appear more than 2 times in the table.
-Find all the names of the districts in the Netherlands. (names should appear only once)
+1. What's the population of the world ?
+1. What is the name and the population of the most populated city in India?
+1. Find which countries do not have a capital.
+1. Which country has the lowest population? List all if more than one
+1. What are the names of all the cities in Vietnam?
+1. Find the average life expectancy per continent.
+1. Find the name and population of each USA district.
+1. Find the name of the cities that appear more than 2 times in the table.
+1. Find all the names of the districts in the Netherlands. (names should appear only once)
 
 
 IMDB:
-Find the minimum and the maximum age of the actors per gender.
-Find how many actors are in their 20’s, 30’s, 40’s, 50’s etc (grouped by decade).
-Print the names and biographies of the actors in this format “ANNE HATHAWAY BIO: 1 golden globe”
-Find the names of the directors who have more than 2 films in the database.
+1. Find the minimum and the maximum age of the actors per gender.
+1. Find how many actors are in their 20’s, 30’s, 40’s, 50’s etc (grouped by decade).
+1. Print the names and biographies of the actors in this format “ANNE HATHAWAY BIO: 1 golden globe”
+1. Find the names of the directors who have more than 2 films in the database.
 
 
 ## Clarifications
