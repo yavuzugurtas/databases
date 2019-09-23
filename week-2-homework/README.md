@@ -74,7 +74,7 @@ A *Todo* has a `description` and flag to indicate if it's done.
 
 Think of how you'd model this in a database. What tables would you create?
 
-## Exercise 4: Use Primary and Foreign Keys to link the tables.
+## Exercise 4: Use Primary Keys.
 
 Each user should be uniquely identifiable, so should each todo. Think of what primary keys are needed.
 
