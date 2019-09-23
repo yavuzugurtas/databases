@@ -4,17 +4,18 @@
 ## Exercise 1: Build you own ER diagram
 
 Create a  new ERD based on the musicians database.
-Include more entities like: Bands,  etc
-Be careful to use the correct relationships between the entities and pay attention to Cardinality & Modality. 
+Include more entities like: Bands,  Songs, Albums etc
+Be careful to use the correct relationships between the entities and pay attention to cardinality & modality.
 Keep it simple :)
 
-You can use Lucidchart or the software of you choice. The final form should be submitted in pdf or with a link to Lucidchart. 
+You can use Lucidchart or draw.io to create the diagram. The final form should be submitted in pdf or with a link to Lucidchart.
 
 ## Exercise 2: Queries
 
 ### Loading the Data
 
 You need to load `world.sql` and `imdb.sql`  similarly to how you loaded the musicians and cars datasets last week.
+In the case of  `imdb`  please source the file again, since the database has been updated with more data.
 
 - For mac and linux users who can use mysql from the shell, remember to load it with the `< file.sql` technique.
 - For windows users, copy paste into work bench and execute from there.
@@ -26,28 +27,26 @@ After loading the 2 new databases and tables into mysql, take some time to famil
 
 In order to query properly, you must understand which tables have what kind of data so you know where to look.
 
-Please complete the following tasks.
-
 
 ### Write queries to retrieve data that answers the following questions:
 
 WORLD:
+What's the population of the world ?
 What is the name and the population of the most populated city in India?
-List the names of the countries having at least 3 cities with 3 million inhabitants.
-What is the number of all the official languages? 
-List the country name and the number of official languages.
-Find all the countries that have only one official language.
 Find which countries do not have a capital.
-Which country has the lowest population?
-Make a list with all the languages spoken in Eastern Africa.
+Which country has the lowest population? List all if more than one
+What are the names of all the cities in Vietnam?
+Find the average life expectancy per continent.
+Find the name and population of each USA district.
+Find the name of the cities that appear more than 2 times in the table.
+Find all the names of the districts in the Netherlands. (names should appear only once)
+
 
 IMDB:
 Find the minimum and the maximum age of the actors per gender.
 Find how many actors are in their 20’s, 30’s, 40’s, 50’s etc (grouped by decade).
-Add a column to the films table for storing the duration (runtime) or each film.
-Alter the data type of column age to INT.
 Print the names and biographies of the actors in this format “ANNE HATHAWAY BIO: 1 golden globe”
-Delete the column biography from actors.
+Find the names of the directors who have more than 2 films in the database.
 
 
 ## Clarifications
