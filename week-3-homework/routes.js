@@ -10,11 +10,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'API ready' });
+  res.send({ msg: 'hellow!' });
+})
+
+app.get('/:id', (req, res) => {
+  const id = 'parse the description from the request';
+  connectedModel.read(id, (err, result) => {
+    if (err) {
+      console.error(err);
+      // send a helpful error response!
+    } else {
+      console.log('create successful');
+      res.send(result);
+    }
+  })
 });
 
 app.post('/', (req, res) => {
-  const description = 'parse the description from the body';
+  const description = 'parse the description from the request';
   connectedModel.create(description, (err, result) => {
     if (err) {
       console.error(err);
@@ -27,9 +40,9 @@ app.post('/', (req, res) => {
 });
 
 app.patch('/', (req, res) => {
-  const id = 'parse the id from the body';
-  const description = 'parse the description from the body';
-  connectedModel.create(id, description, (err, result) => {
+  const id = 'parse the id from the request';
+  const description = 'parse the description from the request';
+  connectedModel.update(id, description, (err, result) => {
     if (err) {
       console.error(err);
       // send a helpful error response!
@@ -41,8 +54,8 @@ app.patch('/', (req, res) => {
 });
 
 app.delete('/', (req, res) => {
-  const id = 'parse the id from the body';
-  connectedModel.create(id, (err, result) => {
+  const id = 'parse the id from the request';
+  connectedModel.delete(id, (err, result) => {
     if (err) {
       console.error(err);
       // send a helpful error response!
@@ -54,9 +67,9 @@ app.delete('/', (req, res) => {
 });
 
 app.patch('/tagTodoItem', (req, res) => {
-  const itemId = 'parse the id from the body';
-  const tagId = 'parse the id from the body';
-  connectedModel.create(itemId, tagId, (err, result) => {
+  const itemId = 'parse the id from the request';
+  const tagId = 'parse the id from the request';
+  connectedModel.tagTodoItem(itemId, tagId, (err, result) => {
     if (err) {
       console.error(err);
       // send a helpful error response!
@@ -68,9 +81,9 @@ app.patch('/tagTodoItem', (req, res) => {
 });
 
 app.patch('/untagTodoItem', (req, res) => {
-  const itemId = 'parse the id from the body';
-  const tagId = 'parse the id from the body';
-  connectedModel.create(itemId, tagId, (err, result) => {
+  const itemId = 'parse the id from the request';
+  const tagId = 'parse the id from the request';
+  connectedModel.untagTodoItem(itemId, tagId, (err, result) => {
     if (err) {
       console.error(err);
       // send a helpful error response!
@@ -82,9 +95,8 @@ app.patch('/untagTodoItem', (req, res) => {
 });
 
 app.patch('/markCompleted', (req, res) => {
-  const itemId = 'parse the id from the body';
-  const tagId = 'parse the id from the body';
-  connectedModel.create(itemId, tagId, (err, result) => {
+  const itemId = 'parse the id from the request';
+  connectedModel.markCompleted(itemId, (err, result) => {
     if (err) {
       console.error(err);
       // send a helpful error response!

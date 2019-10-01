@@ -21,32 +21,53 @@ class TodoModel {
     });
   }
 
-  terst() {
-    // return
+  read(id, callback) {
+    // Write code and query to return TODO by id
+
+    // placeholder to make sure your routes are working
+    callback(null, { id })
   }
 
   create(description, callback) {
     // Write code and query to create a new TODO item
+
+    // placeholder to make sure your routes are working
+    callback(null, { description })
   }
 
   update(id, description, callback) {
     // Write code and query to update and existing TODO item
+
+    // placeholder to make sure your routes are working
+    callback(null, { id, description })
   }
 
   delete(id, callback) {
     // Write code and query to delete an existing TODO item
+
+    // placeholder to make sure your routes are working
+    callback(null, { id })
   }
 
   tagTodoItem(todoItemId, tagId, callback) {
     // Write code and query add a tag to a TODO item
+
+    // placeholder to make sure your routes are working
+    callback(null, { todoItemId, tagId })
   }
 
   untagTodoItem(todoItemId, tagId, callback) {
     // Write code and query remove a tag from a TODO item
+
+    // placeholder to make sure your routes are working
+    callback(null, { todoItemId, tagId })
   }
 
   markCompleted(todoItemId, callback) {
     // Write code to mark a TODO item as completed
+
+    // placeholder to make sure your routes are working
+    callback(null, { todoItemId });
   }
 }
 
